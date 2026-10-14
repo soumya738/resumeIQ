@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Compare your resume with a job description and get a clear ATS-readiness report."
+    />
+    <meta name="theme-color" content="#10130f" />
+    <title>ResumeIQ — Make your next move count</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="ResumeIQ home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M8 23V9h8.1a5.1 5.1 0 0 1 0 10.2H8" />
+              <path d="m17.5 19 6.5 4" />
+              <path d="M21.5 9v4" />
+            </svg>
+          </span>
+          <span class="brand-name">resume<span>iq</span></span>
+        </a>
+
+        <div class="topbar-actions">
+          <span class="privacy-note">
+            <span class="privacy-dot"></span>
+            Your resume stays on this device
+          </span>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch color theme"
+            title="Switch color theme"
+          >
+            <svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+            </svg>
+            <svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.7 8.7 0 1 0 20.2 15.3Z" />
+            </svg>
+            <span class="theme-label"></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+            <h1 id="page-title">Make your resume<br />work <em>smarter.</em></h1>
+            <p class="intro-text">
+              See how your experience lines up with the role. Get a clear ATS
+              score, spot missing keywords, and make your next application count.
+            </p>
+          </div>
+          <div class="intro-aside" aria-label="How it works">
+            <span class="step-number">01 <i></i> 02 <i></i> 03</span>
+            <span class="step-caption">PASTE&nbsp; · &nbsp;COMPARE&nbsp; · &nbsp;REFINE</span>
+          </div>
+        </section>
+
+        <section class="analysis-workspace" aria-label="Resume and job description">
+          <article class="input-card resume-card">
+            <div class="card-heading">
+              <div class="heading-icon resume-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 3.75h7l4.25 4.3v12.2H7a2 2 0 0 1-2-2v-12.5a2 2 0 0 1 2-2Z" />
+                  <path d="M14 4v4.5h4.5M8.5 12h7M8.5 15.5h7" />
+                </svg>
+              </div>
+              <div>
+                <p class="card-kicker">FIRST, THE FOUNDATION</p>
+                <h2>Your resume</h2>
+              </div>
+              <span class="input-index">01</span>
+            </div>
+            <label class="sr-only" for="resumeInput">Paste your resume text</label>
+            <textarea
+              id="resumeInput"
+              class="text-input"
+              placeholder="Paste your resume here — include your experience, skills, and education for the most useful results."
+              spellcheck="false"
+            ></textarea>
+            <div class="input-foot">
+              <span class="field-hint"><span class="hint-dot"></span> Plain text works best</span>
+              <span class="field-hint">Saved privately in your browser</span>
+            </div>
+          </article>
+
+          <article class="input-card job-card">
+            <div class="card-heading">
+              <div class="heading-icon job-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="7" width="16" height="13" rx="2" />
+                  <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7m-11 5h16m-10-1v2h4v-2" />
+                </svg>
+              </div>
+              <div>
+                <p class="card-kicker">THEN, THE OPPORTUNITY</p>
+                <h2>Job description</h2>
+              </div>
+              <span class="input-index">02</span>
+            </div>
+            <label class="sr-only" for="jobInput">Paste the job description</label>
+            <textarea
+              id="jobInput"
+              class="text-input"
+              placeholder="Paste the job description you're applying for. We'll look for the skills and experience it asks for."
+              spellcheck="false"
+            ></textarea>
+            <div class="input-foot">
+              <span class="field-hint"><span class="hint-dot"></span> Include the full posting</span>
+              <span class="field-hint">No account needed</span>
+            </div>
+          </article>
+        </section>
+
+        <div class="analyze-row">
+          <p class="analyze-note">A thoughtful application starts with a better match.</p>
+          <div class="analyze-action">
+            <span id="analyzeStatus" class="status-message" role="status" aria-live="polite"></span>
+            <button id="analyzeBtn" class="button button-primary" type="button">
+              <span>Analyze my match</span>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M3.5 10h12m-5-5 5 5-5 5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <section id="results" class="results hidden" aria-labelledby="results-title">
+          <div class="results-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> YOUR MATCH REPORT</p>
+              <h2 id="results-title">A clearer picture.</h2>
+            </div>
+            <span class="report-tag"><span class="report-dot"></span> ANALYSIS COMPLETE</span>
+          </div>
+
+          <div class="results-top-grid">
+            <article class="result-card score-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">OVERALL ATS MATCH</p>
+                  <h3>Your match score</h3>
+                </div>
+                <span class="score-label">OUT OF 100</span>
+              </div>
+              <div class="score-content">
+                <div id="scoreCircle" class="score-circle">
+                  <div class="score-circle-inner">
+                    <span id="scoreValue" class="score-value">0</span>
+                    <span class="score-out-of">/ 100</span>
+                  </div>
+                </div>
+                <div class="score-copy">
+                  <p id="scoreMessage" class="score-message">Your score will appear here.</p>
+                  <p id="wordCount" class="word-count">0 words in resume</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="result-card category-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">SKILLS BREAKDOWN</p>
+                  <h3>Where you stand</h3>
+                </div>
+                <span class="mini-spark" aria-hidden="true">↗</span>
+              </div>
+              <div id="categories-container" class="categories-list"></div>
+            </article>
+          </div>
+
+          <div class="results-middle-grid">
+            <article class="result-card sections-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">THE ESSENTIALS</p>
+                  <h3>Resume sections</h3>
+                </div>
+              </div>
+              <div id="sections-container" class="sections-list"></div>
+            </article>
+
+            <article class="result-card suggestions-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">A FEW GOOD NEXT STEPS</p>
+                  <h3>Ways to strengthen it</h3>
+                </div>
+                <span class="sparkle-mark" aria-hidden="true">✳</span>
+              </div>
+              <div id="suggestions-container" class="suggestions-list"></div>
+            </article>
+          </div>
+
+          <div class="results-keywords-grid">
+            <article class="result-card keyword-card matched-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">GOOD ALIGNMENT</p>
+                  <h3>Keywords you have</h3>
+                </div>
+                <span class="keyword-count-label">MATCHED</span>
+              </div>
+              <div id="matched-container" class="keyword-list"></div>
+            </article>
+
+            <article class="result-card keyword-card missing-card">
+              <div class="result-card-top">
+                <div>
+                  <p class="card-kicker">ROOM TO GROW</p>
+                  <h3>Keywords to consider</h3>
+                </div>
+                <button id="copyMissingKeywords" class="button button-quiet" type="button">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <rect x="7" y="7" width="9" height="10" rx="1.5" />
+                    <path d="M13 7V5.5A1.5 1.5 0 0 0 11.5 4h-6A1.5 1.5 0 0 0 4 5.5v8A1.5 1.5 0 0 0 5.5 15H7" />
+                  </svg>
+                  Copy list
+                </button>
+              </div>
+              <p id="copystatus" class="copy-status" role="status" aria-live="polite"></p>
+              <div id="missing-container" class="keyword-list"></div>
+            </article>
+          </div>
+
+          <article id="aiPanel" class="result-card ai-card hidden">
+            <div class="ai-copy">
+              <p class="card-kicker">A LITTLE EXTRA HELP</p>
+              <h3>Personalized AI suggestions</h3>
+              <p>Your Gemini API key is kept for this browser session. Your resume and job description are sent directly to Google for suggestions.</p>
+            </div>
+            <div class="ai-controls">
+              <label class="sr-only" for="geminiKey">Gemini API key</label>
+              <input
+                id="geminiKey"
+                class="key-input"
+                type="password"
+                autocomplete="off"
+                placeholder="Enter your Gemini API key"
+              />
+              <button id="aiBtn" class="button button-secondary" type="button">
+                Get suggestions
+              </button>
+            </div>
+            <p id="aiStatus" class="ai-status" role="status" aria-live="polite"></p>
+            <ol id="aiSuggestionsList" class="ai-suggestions"></ol>
+          </article>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <span>Thoughtful tools for your next big move.</span>
+        <span class="footer-mark">RESUMEIQ <i>·</i> BUILT FOR WHAT'S NEXT</span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="gemini.js"></script>
+  </body>
+</html>
